@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Passport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- nan section -->
+    <nav class="navbar ">
+        <div class="container">
+            <div class="w-100 d-flex justify-content-between align-items-center nav ">
+                <img width="220" src="/assets/DiamondPassport (1).jpeg" alt="" srcset="">
+                <img id="ess-logo" width="130" src="/assets/Essentia1370x280.png" alt="" srcset="">
+            </div>
+        </div>
+    </nav>
+
+    <!-- main view -->
+    <div id="main-view">
+        <div class="container mt-4">
+            <div class="row">
+                <!-- diamond gallery view -->
+                <div class="col-lg">
+                    <div class="row text-center">
+                        <h3> <b>Stone #514 </b><b3>
+                        <h6 class="text-muted subtitle">(b416dbc8-31fe-ca05-c941-6b1a2e938732)</h6>
+
+                    </div>
+                    <!-- buttons view -->
+                    <div id="btns" class="row  ">
+                        <div  class="col">
+                            <button id="image-btn"  onclick="switchView(this)" type="button" autofocus class="btn w-100 btn-secondry mybutton activeBtn">Image</button>
+                        </div>
+                        <div class="col">
+                            <button id="video-btn"  onclick="switchView(this)" type="button" class="btn w-100 btn-secondry">Video</button>
+                        </div>
+                        <div class="col">
+                            <button id="pdf-btn" onclick="switchView(this)" type="button" class="btn w-100 btn-secondry ">Cartificate</button>
+                        </div>
+                    </div>
+
+                    <!-- gallery view -->
+                    <div class="row mt-3">
+                        <div class="col-lg">
+                            <div class="rectangle"> 
+                                 <!-- options for gallaery -->
+                            <img id="diamond_image" width="300" height=200 class="mx-auto img-fluid" src="/assets/diamond_img.jpg" alt="" srcset="">
+                            <iframe id="video_view" hidden=true src="https://player.vimeo.com/video/348594400"  frameborder="0"  allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <embed id="pdf_view" hidden=true src="/assets/pdf_sample.pdf" width="100%" height="100%" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 4cs images view  -->
+                    <div class="row mt-3 justify-content-center align-items-center text-center lato">
+                        <div class="col">
+                            <img class="mb-4" width="40" src="/assets/61a4dfa85712f2a8c7002dd0f05814d2.png" alt="">
+                            <h6 class="card-subtitle text-muted">Shape</h6>
+                            <h5> <b>SH</b></h5>
+                        </div>
+                        <div class="col">
+                            <img class="mb-4" width="40" src="/assets/Image 17.png" alt="">
+                            <h6 class="card-subtitle text-muted">Color</h6>
+                            <h5> <b>F</b></h5>
+                        </div>
+                        <div class="col">
+                            <img class="mb-4" width="90" src="/assets/Rectangle 458.png" alt="">
+                            <h6 class="card-subtitle text-muted">Cut</h6>
+                            <h5> <b>-</b></h5>
+                        </div>
+                        <div class="col">
+                            <img class="mb-4" width="90" src="/assets/Rectangle 469@2x.png" alt="">
+                            <h6 class="card-subtitle text-muted">Clarity</h6>
+                           <h5> <b>VS2</b></h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- diamond info view -->
+                <div class="col-lg lato">
+                    <table class="table  table-striped">
+
+                        <tbody>
+                            <tr>
+                                <td>Certificate #</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Lab</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Measurements</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Polish</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Symmetry</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Fluorescence</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Table</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Depth</td>
+                                <td>{{bind}}</td>
+                            </tr>
+                            <tr>
+                                <td>Girdle</td>
+                                <td>{{bind}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Culet</td>
+                                <td>{{bind}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bottom view -->
+    <div id="banner-view">
+        <div class="container">
+            <div class="row  tet align-items-end text-center ">
+                <div class="col-lg ">
+                    <h4> <b>DiamondPassport™ </b> <span style="font-size: 14px; font-weight: 300;" class="subtitle"> powered by
+                        </span> <img width="130" src="/assets/logom.png" alt="" srcset="">
+                    </h4>
+                    <button type="button" class="btn btn-primary my-3 "><a href="https://accadiasoftware.com/"> Start Your Free Trial Today </a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+
+</html>
