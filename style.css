@@ -62,8 +62,10 @@ table.table.table-striped {
 }
 
 #banner-view {
-    background-image: url("ddr.jpg");
-    background-size: cover;
+    background: url("ddr.jpg") no-repeat;
+    background-attachment:local;
+    background-position: center center;
+    background-size: cover; 
     margin-top: -95px;
     min-height: 300px;
 }
@@ -122,7 +124,9 @@ h6{
 .lato { 
     font-family: "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+.container {
+    max-width: 70%;
+}
 .activeBtn{ 
     background-color: #004155;
     color: white;
@@ -132,6 +136,20 @@ h6{
     color: white;
 }
 
+div#pdf_view {
+    width: 100%;
+    height: 100%;
+}
+
+  .viewPDFfull{
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      background: #004155;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: white;
+  }
 .btn-primary:focus {
 
 background-color: #FF8600;
@@ -139,9 +157,9 @@ border-color: #FF8600;
 }
 .rectangle {
     height: 280px;
+    position: relative;
     background: #B1B2B6;
     display: flex;
-    
 }
 
 .table>:not(caption)>*>* {
@@ -151,17 +169,30 @@ border-color: #FF8600;
     border-bottom-width: 1px;
 }
 
+.mobile-img{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     table.table.table-striped {
         width: 100%;
     }
 
+    .mobile-img{
+        display: block;
+    }
+    #banner-view {
+        background: none;
+ 
+        margin-top: -95px;
+        min-height: 300px;
+    }
     table {
         margin-top: 20px;
     }
 
-    #banner-view{
-        background-image: unset;
+    .container {
+        max-width: 100%;
     }
     .nav{
         display: flex;
